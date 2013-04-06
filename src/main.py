@@ -25,8 +25,15 @@ class Charts:
     def GET(self):
         """ Show page """
         web.header('Content-Type', 'application/json')
-        todos = [{"name":m.title} for m in model.get_todos()]
+        todos = [
+            { "title": '2008', "value": 20 },
+            { "title": '2009', "value": 10 },
+            { "title": '2010', "value": 5 },
+            { "title": '2011', "value": 5 },
+            { "title": '2012', "value": 20 }
+        ]
         return json.dumps(todos)
+
 
 
 
